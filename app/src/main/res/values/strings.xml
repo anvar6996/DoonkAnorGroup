@@ -47,4 +47,20 @@
     <string name="tashkent">Ташкент - Москва</string>
     <string name="info">23 июнья, 2 человека</string>
 
+    <!--SeatScreen-->
+    <string name="places">Места</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="howManyPlaces">Сколько свободных мест?</string>
+    <string name="chooseCountPlace">Выберите количество мест</string>
+    <string name="placesState">2 места на заднем </string>
+    <string name="descriptionClue">Добавить их, тогда попутчики из промежуточных пунктов смогут тоже бронироватьт</string>
+
+    <!--Screen trip detalis-->
+
+    <string name="trip_detalis">Детали поездки</string>
+    <string name="repet_trip">Передстоит обратная поездка? Опубликуйте ее уже сейчас!</string>
+    <string name="show_trip">Поездка опубликована! Пассафжиры забронирует места и поедут с вами!</string>
+    <string name="wath_trip">Посмотреть поездку </string>
+
 </resources>
