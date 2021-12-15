@@ -6,12 +6,12 @@ import androidx.fragment.app.Fragment
 import by.kirich1409.viewbindingdelegate.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 import uz.anorgroup.doonkanorgroup.R
-import uz.anorgroup.doonkanorgroup.databinding.MainScreenBinding
+import uz.anorgroup.doonkanorgroup.databinding.ScreenMainBinding
 import uz.anorgroup.doonkanorgroup.presenter.adapters.PageAdapter
 
 @AndroidEntryPoint
 class MainScreen : Fragment(R.layout.screen_main) {
-    private val bind by viewBinding(MainScreenBinding::bind)
+    private val bind by viewBinding(ScreenMainBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

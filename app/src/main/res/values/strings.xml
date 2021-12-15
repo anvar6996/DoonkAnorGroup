@@ -15,10 +15,13 @@
     <string name="create">Создать</string>
     <string name="chat">Чат</string>
     <string name="profile">Профиль</string>
+
     <!--Profile page-->
-    <string name="mydate">Личные данные</string>
-<!--    <string name="mydate">Уведомления</string>-->
-<!--    <string name="mydate">Отзывы</string>-->
+
+    <string name="settingsAccount">Настройка аккаунта</string>
+    <string name="ownDate">Личные данные</string>
+    <string name="notification">Уведомления</string>
+    <string name="comment">Отзывы</string>
     <string name="additionally">Дополнительно</string>
     <string name="aboutProject">О проекте</string>
     <string name="blog">Блог</string>
