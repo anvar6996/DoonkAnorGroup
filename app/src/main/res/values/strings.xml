@@ -2,6 +2,7 @@
     <string name="app_name">DoonkAnorGroup</string>
     <!--    Post page-->
     <string name="kuda">Откуда вы выезжаете?</string>
+    <string name="createTrip">Создание поездки</string>
     <string name="city">Город, населенный пункт?</string>
     <string name="street">Улица, район отправления?</string>
     <string name="your_directions">Куда вы едете?</string>
@@ -14,4 +15,19 @@
     <string name="create">Создать</string>
     <string name="chat">Чат</string>
     <string name="profile">Профиль</string>
+    <!--Profile page-->
+    <string name="mydate">Личные данные</string>
+<!--    <string name="mydate">Уведомления</string>-->
+<!--    <string name="mydate">Отзывы</string>-->
+    <string name="additionally">Дополнительно</string>
+    <string name="aboutProject">О проекте</string>
+    <string name="blog">Блог</string>
+    <string name="answerAndQuestions">Вопросы и ответы</string>
+    <string name="safety">Безопасность</string>
+    <string name="callBack">Обратная связь</string>
+    <string name="pay_type">Способы оплаты</string>
+    <string name="user_agreements">Пользовательская соглашение</string>
+    <string name="policy">Политика конфиденциальности</string>
+    <string name="markApp">Оценить приложение</string>
+    <string name="exit">Выход</string>
 </resources>

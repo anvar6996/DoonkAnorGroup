@@ -12,4 +12,5 @@
     <color name="realBlack">#000000</color>
     <color name="realWhite">#FFFFFF</color>
     <color name="nextBt">#27AE61</color>
+    <color name="profile_page_bg">#E5E5E5</color>
 </resources>
