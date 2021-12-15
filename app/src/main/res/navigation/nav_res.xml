@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/mainScreen"
-        tools:layout="@layout/main_screen"
+        tools:layout="@layout/screen_main"
         android:name="uz.anorgroup.doonkanorgroup.presenter.screens.MainScreen"
         android:label="MainScreen" />
 </navigation>

@@ -7,7 +7,7 @@ import uz.anorgroup.doonkanorgroup.R
 import uz.anorgroup.doonkanorgroup.databinding.SearchPageBinding
 
 @AndroidEntryPoint
-class SearchPage : Fragment(R.layout.search_page) {
+class SearchPage : Fragment(R.layout.page_search) {
     private val bind by viewBinding(SearchPageBinding::bind)
 
 

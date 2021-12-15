@@ -30,4 +30,10 @@
     <string name="policy">Политика конфиденциальности</string>
     <string name="markApp">Оценить приложение</string>
     <string name="exit">Выход</string>
+
+
+    <string name="kirish">Kirish</string>
+    <string name="registratsiya">Registratsiya</string>
+    <string name="tasdiqlash_ko_dini_kiriting">Tasdiqlash ko\'dini kiriting</string>
+    <string name="davomettirish">Davom ettirish</string>
 </resources>

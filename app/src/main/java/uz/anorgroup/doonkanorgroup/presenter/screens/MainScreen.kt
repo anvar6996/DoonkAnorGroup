@@ -10,7 +10,7 @@ import uz.anorgroup.doonkanorgroup.databinding.MainScreenBinding
 import uz.anorgroup.doonkanorgroup.presenter.adapters.PageAdapter
 
 @AndroidEntryPoint
-class MainScreen : Fragment(R.layout.main_screen) {
+class MainScreen : Fragment(R.layout.screen_main) {
     private val bind by viewBinding(MainScreenBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -7,7 +7,7 @@ import uz.anorgroup.doonkanorgroup.R
 import uz.anorgroup.doonkanorgroup.databinding.ChatPageBinding
 
 @AndroidEntryPoint
-class ChatPage : Fragment(R.layout.chat_page) {
+class ChatPage : Fragment(R.layout.page_chat) {
     private val bind by viewBinding(ChatPageBinding::bind)
 
 

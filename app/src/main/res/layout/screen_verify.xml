@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_intro">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".2"
+        android:src="@color/black" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:src="@drawable/doonk_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.34" />
+
+    <ImageView
+        android:id="@+id/textIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/doonk_text_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon" />
+
+    <ImageView
+        android:id="@+id/editBack"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="24dp"
+        android:src="@drawable/edit_drawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".81" />
+
+
+    <ImageView
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="6dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/login_drawable"
+        app:layout_constraintTop_toBottomOf="@id/editBack" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:text="@string/davomettirish"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/loginBtn"
+        app:layout_constraintLeft_toLeftOf="@id/loginBtn"
+        app:layout_constraintRight_toRightOf="@id/loginBtn"
+        app:layout_constraintTop_toTopOf="@id/loginBtn" />
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="3dp"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/edit_drawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/tasdiqlash_ko_dini_kiriting"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/editBack"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/code1Back"
+        android:layout_width="64dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/edit_drawable"
+        android:backgroundTint="#B3000000"
+        app:layout_constraintBottom_toBottomOf="@id/editBack"
+        app:layout_constraintLeft_toLeftOf="@id/editBack" />
+
+    <ImageView
+        android:id="@+id/code2Back"
+        android:layout_width="64dp"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/edit_drawable"
+        android:backgroundTint="#B3000000"
+        android:text="8"
+        app:layout_constraintBottom_toBottomOf="@id/editBack"
+        app:layout_constraintLeft_toRightOf="@id/code1Back" />
+
+    <ImageView
+        android:id="@+id/code3Back"
+        android:layout_width="64dp"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/edit_drawable"
+        android:backgroundTint="#B3000000"
+        app:layout_constraintBottom_toBottomOf="@id/editBack"
+        app:layout_constraintLeft_toRightOf="@id/code2Back" />
+
+    <ImageView
+        android:id="@+id/code4Back"
+        android:layout_width="64dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/edit_drawable"
+        android:backgroundTint="#B3000000"
+        android:text="5"
+        app:layout_constraintBottom_toBottomOf="@id/editBack"
+        app:layout_constraintLeft_toRightOf="@id/code3Back"
+        app:layout_constraintRight_toRightOf="@id/editBack" />
+
+    <TextView
+        android:id="@+id/code1Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="9"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/code1Back"
+        app:layout_constraintLeft_toLeftOf="@id/code1Back"
+        app:layout_constraintRight_toRightOf="@id/code1Back" />
+
+    <TextView
+        android:id="@+id/code2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="9"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/code2Back"
+        app:layout_constraintLeft_toLeftOf="@id/code2Back"
+        app:layout_constraintRight_toRightOf="@id/code2Back" />
+
+    <TextView
+        android:id="@+id/code3Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="9"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/code3Back"
+        app:layout_constraintLeft_toLeftOf="@id/code3Back"
+        app:layout_constraintRight_toRightOf="@id/code3Back" />
+
+    <TextView
+        android:id="@+id/code4Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="9"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/code4Back"
+        app:layout_constraintLeft_toLeftOf="@id/code4Back"
+        app:layout_constraintRight_toRightOf="@id/code4Back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

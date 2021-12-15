@@ -7,7 +7,7 @@ import uz.anorgroup.doonkanorgroup.R
 import uz.anorgroup.doonkanorgroup.databinding.ProfilePageBinding
 
 @AndroidEntryPoint
-class ProfilePage : Fragment(R.layout.profile_page) {
+class ProfilePage : Fragment(R.layout.page_profile) {
     private val bind by viewBinding(ProfilePageBinding::bind)
 
 }

@@ -7,6 +7,6 @@ import uz.anorgroup.doonkanorgroup.R
 import uz.anorgroup.doonkanorgroup.databinding.PostPageBinding
 
 @AndroidEntryPoint
-class CreateTripPage : Fragment(R.layout.post_page) {
+class CreateTripPage : Fragment(R.layout.page_post) {
     private val bind by viewBinding(PostPageBinding::bind)
 }
