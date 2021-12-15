@@ -8,7 +8,38 @@
 
     <fragment
         android:id="@+id/mainScreen"
-        tools:layout="@layout/screen_main"
         android:name="uz.anorgroup.doonkanorgroup.presenter.screens.MainScreen"
-        android:label="MainScreen" />
+        android:label="MainScreen"
+        tools:layout="@layout/screen_main" />
+    <fragment
+        android:id="@+id/registerScreen"
+        android:name="uz.anorgroup.doonkanorgroup.presenter.screens.RegisterScreen"
+        android:label="RegisterScreen"
+        tools:layout="@layout/screen_register">
+        <action
+            android:id="@+id/action_registerScreen_to_verifyScreen"
+            app:destination="@id/verifyScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="uz.anorgroup.doonkanorgroup.presenter.screens.LoginScreen"
+        android:label="LoginScreen"
+        tools:layout="@layout/screen_login">
+        <action
+            android:id="@+id/action_loginScreen_to_registerScreen"
+            app:destination="@id/registerScreen" />
+        <action
+            android:id="@+id/action_loginScreen_to_verifyScreen"
+            app:destination="@id/verifyScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyScreen"
+        android:name="uz.anorgroup.doonkanorgroup.presenter.screens.VerifyScreen"
+        android:label="VerifyScreen"
+        tools:layout="@layout/screen_verify">
+        <action
+            android:id="@+id/action_verifyScreen_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
 </navigation>

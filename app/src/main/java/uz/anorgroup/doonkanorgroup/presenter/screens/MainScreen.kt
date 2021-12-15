@@ -18,6 +18,7 @@ class MainScreen : Fragment(R.layout.screen_main) {
         val pageAdapter = PageAdapter(childFragmentManager, lifecycle)
         bind.pager.adapter = pageAdapter
 
+        bind.pager.isUserInputEnabled = false
         bind.tablayout.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.trip -> {

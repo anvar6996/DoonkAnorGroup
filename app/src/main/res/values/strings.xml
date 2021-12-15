@@ -39,4 +39,12 @@
     <string name="registratsiya">Registratsiya</string>
     <string name="tasdiqlash_ko_dini_kiriting">Tasdiqlash ko\'dini kiriting</string>
     <string name="davomettirish">Davom ettirish</string>
+
+    <!--Chat page-->
+    <string name="chat_toolbar">Чат</string>
+    <!--Search page-->
+
+    <string name="tashkent">Ташкент - Москва</string>
+    <string name="info">23 июнья, 2 человека</string>
+
 </resources>
