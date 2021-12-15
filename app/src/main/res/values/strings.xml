@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">DoonkAnorGroup</string>
+    <!--    Post page-->
+    <string name="kuda">Откуда вы выезжаете?</string>
+    <string name="city">Город, населенный пункт?</string>
+    <string name="street">Улица, район отправления?</string>
+    <string name="your_directions">Куда вы едете?</string>
+    <string name="street_directions">Куда вы едете?</string>
+    <string name="next">Далее</string>
+
+    <!--Main Screen-->
+    <string name="trip">Поездки</string>
+    <string name="search">Поиск</string>
+    <string name="create">Создать</string>
+    <string name="chat">Чат</string>
+    <string name="profile">Профиль</string>
 </resources>
