@@ -4,8 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import uz.anorgroup.doonk.presenter.screens.pages.*
-import uz.anorgroup.doonkanorgroup.presenter.screens.pages.ChatPage
+import uz.anorgroup.doonkanorgroup.presenter.screens.pages.*
 
 class PageAdapter(
     frm: FragmentManager, lifecycle: Lifecycle

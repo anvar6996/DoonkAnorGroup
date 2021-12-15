@@ -7,15 +7,15 @@
         android:title="@string/trip" />
 
     <item
-        android:id="@+id/favourite"
+        android:id="@+id/search"
         android:icon="@drawable/ic_search_svgrepo_com"
         android:title="@string/search" />
     <item
-        android:id="@+id/menu"
+        android:id="@+id/create"
         android:icon="@drawable/ic_add_svgrepo_com"
         android:title="@string/create" />
     <item
-        android:id="@+id/place"
+        android:id="@+id/chat"
         android:icon="@drawable/ic_chat"
         android:title="@string/chat" />
 
