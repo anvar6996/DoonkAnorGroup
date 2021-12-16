@@ -72,4 +72,13 @@
     <string name="comment_trip">Оставьте комментарий к вашей поездке</string>
     <string name="comment_hint">Как поедите, планируете ли остановки, правила поведение в машине и т.п.</string>
 
+    <!--Screen Vehicle Type-->
+    <string name="autoCar">Автомобиль</string>
+    <string name="your_car">Какой у вас автомобиль?</string>
+    <string name="chevrolet_lacetti">Chevrolet Lacetti</string>
+    <string name="bus">МAN 40/ft Long</string>
+    <string name="fura">МAN 40/ft Long</string>
+    <string name="addCar">+ Добавить автомобиль</string>
+
+
 </resources>
