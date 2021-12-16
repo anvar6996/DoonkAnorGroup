@@ -19,7 +19,7 @@ interface AuthApi {
     @POST("signUp")
     suspend fun register(@Body data: RegisterRequest): Response<RegisterResponse>
 
-    @POST("signUp")
+    @POST("confirm")
     suspend fun continueSingUp(@Body data: ContinueSignUpRequest): Response<RegisterResponse>
 
     @POST("verify")
