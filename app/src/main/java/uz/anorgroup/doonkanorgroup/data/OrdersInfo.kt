@@ -10,3 +10,4 @@ data class OrdersInfo constructor(
     val cost: String,
     val placeCount: String
 )
+

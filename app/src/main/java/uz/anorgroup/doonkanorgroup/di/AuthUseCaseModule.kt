@@ -20,7 +20,7 @@ interface AuthUseCaseModule {
     fun getRegisterUseCase(impl: RegisterScreenUseCaseImpl): RegisterScreenUseCase
 
     @Binds
-    fun getVeryfyUseCase(impl: VerifyScreenUseCaseImpl): VerifyScreenUseCase
+    fun getVerifyUseCase(impl: VerifyScreenUseCaseImpl): VerifyScreenUseCase
 
     @Binds
     fun getLoginUseCase(impl: LoginScreenUseCaseImpl): LoginScreenUseCase

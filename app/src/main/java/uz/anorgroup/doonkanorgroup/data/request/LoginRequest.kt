@@ -4,5 +4,5 @@ import com.google.gson.annotations.SerializedName
 
 data class LoginRequest(
 
-	val phone: String? = null
+	val phone: String
 )

@@ -14,7 +14,6 @@ fun OkHttpClient.Builder.addLoggingInterceptor(context: Context): OkHttpClient.B
     val logging = HttpLoggingInterceptor.Logger { message -> Timber.tag("HTTP").d(message) }
     if (BuildConfig.LOGGING) {
         addInterceptor(ChuckInterceptor(context))
-
             .addInterceptor(HttpLoggingInterceptor(logging))
     }
     return this
