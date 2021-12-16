@@ -6,21 +6,20 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
-import uz.anorgroup.doonkanorgroup.data.request.LoginRequest
-import uz.anorgroup.doonkanorgroup.domain.usecase.LoginScreenUseCase
-import uz.anorgroup.doonkanorgroup.presenter.viewmodel.LoginViewModel
+import uz.anorgroup.doonkanorgroup.data.request.VerifyRequest
+import uz.anorgroup.doonkanorgroup.domain.usecase.VerifyScreenUseCase
+import uz.anorgroup.doonkanorgroup.presenter.viewmodel.VerifyViewModel
 import uz.anorgroup.doonkanorgroup.utils.eventValueFlow
 import uz.anorgroup.doonkanorgroup.utils.isConnected
 import javax.inject.Inject
 
 @HiltViewModel
-class LoginViewModelImpl @Inject constructor(private val useCase: LoginScreenUseCase) : ViewModel(), LoginViewModel {
+class VerifyViewModelImpl @Inject constructor(private val useCase: VerifyScreenUseCase) : ViewModel(), VerifyViewModel {
     override val errorFlow = eventValueFlow<String>()
     override val progressFlow = eventValueFlow<Boolean>()
     override val successFlow = eventValueFlow<Unit>()
-    override val openRegisterFlow = eventValueFlow<Unit>()
 
-    override fun login(request: LoginRequest) {
+    override fun verify(request: VerifyRequest) {
         if (!isConnected()) {
             viewModelScope.launch {
                 errorFlow.emit("Internet bilan muammo bo'ldi")
@@ -30,11 +29,10 @@ class LoginViewModelImpl @Inject constructor(private val useCase: LoginScreenUse
         viewModelScope.launch {
             progressFlow.emit(true)
         }
-        useCase.userLogin(request).onEach {
+        useCase.sendSmsVerify(request).onEach {
             it.onSuccess {
                 progressFlow.emit(false)
                 successFlow.emit(Unit)
-                openRegisterFlow.emit(Unit)
             }
             it.onFailure { throwable ->
                 progressFlow.emit(false)

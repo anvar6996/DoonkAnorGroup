@@ -6,6 +6,6 @@ import uz.anorgroup.doonkanorgroup.data.responce.RegisterResponse
 import uz.anorgroup.doonkanorgroup.data.responce.VerifyResponse
 
 interface RegisterScreenUseCase {
-    fun resgiter(request: RegisterRequest): Flow<Result<RegisterResponse>>
+    fun register(request: RegisterRequest): Flow<Result<RegisterResponse>>
 
 }
