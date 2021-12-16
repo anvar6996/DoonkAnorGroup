@@ -9,6 +9,7 @@ import uz.anorgroup.doonkanorgroup.data.responce.LoginResponse
 import uz.anorgroup.doonkanorgroup.data.responce.RegisterResponse
 
 interface AuthApi {
+
     @POST("signIn")
     suspend fun login(@Body data: LoginRequest): Response<LoginResponse>
 
