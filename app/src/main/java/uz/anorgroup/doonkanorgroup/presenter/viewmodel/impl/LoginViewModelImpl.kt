@@ -16,7 +16,7 @@ class LoginViewModelImpl @Inject constructor(private val useCase: LoginScreenUse
     override val successFlow = eventValueFlow<Unit>()
 
     override fun login(request: LoginRequest) {
-        if(!isConnected()){
+        if (!isConnected()) {
 
         }
     }
