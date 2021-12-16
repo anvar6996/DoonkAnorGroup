@@ -39,13 +39,13 @@ class RegisterScreen : Fragment(R.layout.screen_register) {
             loginBtn.isEnabled = it
         }.launchIn(lifecycleScope)
 
-        loginBtn.setOnClickListener {
-            viewModel.register(
-                (
-                    "+998${editText.rawText}"
-                )
-            )
-        }
+//        loginBtn.setOnClickListener {
+//            viewModel.register(
+//                (
+//                    "+998${editText.rawText}"
+//                )
+//            )
+//        }
         viewModel.errorFlow.onEach {
             showToast(it)
         }.launchIn(lifecycleScope)
@@ -54,11 +54,10 @@ class RegisterScreen : Fragment(R.layout.screen_register) {
             showToast("Success")
         }.launchIn(lifecycleScope)
 
-        viewModel.progressFlow.onEach {
-            if (it) progress.show()
-            else progress.hide()
-        }.launchIn(lifecycleScope)
+//        viewModel.progressFlow.onEach {
+//            if (it) progress.show()
+//            else progress.hide()
+//        }.launchIn(lifecycleScope)
     }
-}
 
 }
