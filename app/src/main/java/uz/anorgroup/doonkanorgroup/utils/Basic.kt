@@ -26,7 +26,6 @@ fun myLog(message: String, tag: String = "TTT") {
 fun Fragment.showToast(message: String) {
     Toast.makeText(this.requireContext(), message, Toast.LENGTH_SHORT).show()
 }
-
 fun <T : ViewBinding> T.scope(block : T.() ->Unit) {
     block(this)
 }
