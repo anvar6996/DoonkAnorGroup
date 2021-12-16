@@ -85,6 +85,8 @@
     <string name="easy_car">Легкий автомобиль</string>
     <string name="microBus">Автобус/Микроавтобус</string>
     <string name="fura_add">Фура</string>
-
+    <!--Intermediate -->
+    <string name="intermediate">Промежуточное</string>
+    <string name="add_intermediate">Добавить промежутоные пункты?</string>
 
 </resources>
