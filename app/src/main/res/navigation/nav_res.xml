@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_registerScreen_to_verifyScreen"
             app:destination="@id/verifyScreen" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
     </fragment>
 
     <fragment

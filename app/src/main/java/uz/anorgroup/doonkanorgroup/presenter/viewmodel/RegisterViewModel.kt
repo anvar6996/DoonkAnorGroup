@@ -1,6 +1,7 @@
 package uz.anorgroup.doonkanorgroup.presenter.viewmodel
 
 import kotlinx.coroutines.flow.Flow
+import uz.anorgroup.doonkanorgroup.data.request.ContinueSignUpRequest
 import uz.anorgroup.doonkanorgroup.data.request.LoginRequest
 import uz.anorgroup.doonkanorgroup.data.request.RegisterRequest
 
@@ -10,5 +11,5 @@ interface RegisterViewModel {
     val progressFlow: Flow<Boolean>
     val successFlow: Flow<Unit>
     val openVerifyFlow:Flow<Unit>
-    fun register(request: RegisterRequest)
+    fun register(request: ContinueSignUpRequest)
 }

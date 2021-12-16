@@ -119,11 +119,13 @@ dependencies {
     /**
      MaskEditText
      */
+    implementation 'io.github.vicmikhailau:MaskedEditText:4.0.7'
     implementation 'ru.egslava:MaskedEditText:1.0.5'
 
     /**
      * Corbind
      */
     implementation 'ru.ldralighieri.corbind:corbind:1.5.2'
+
 
 }
