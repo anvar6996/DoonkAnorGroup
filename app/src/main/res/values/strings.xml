@@ -63,4 +63,13 @@
     <string name="show_trip">Поездка опубликована! Пассафжиры забронирует места и поедут с вами!</string>
     <string name="wath_trip">Посмотреть поездку </string>
 
+    <!--Screen trip info-->
+    <string name="detalis_info">Отметьте дополнительные опции </string>
+    <string name="baggage_trip">Перевозка багажа</string>
+    <string name="animals_trip">Перевозка животных</string>
+    <string name="smoke_trip">Курение в салоне</string>
+    <string name="trailer_trip">Прицеп легковой</string>
+    <string name="comment_trip">Оставьте комментарий к вашей поездке</string>
+    <string name="comment_hint">Как поедите, планируете ли остановки, правила поведение в машине и т.п.</string>
+
 </resources>

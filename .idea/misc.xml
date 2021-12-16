@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/app/src/main/res/drawable-v24/avatar_bg.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/app/src/main/res/drawable/comments_bg.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/app/src/main/res/drawable/edit_draweble.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/app/src/main/res/drawable/ic_add_svgrepo_com.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/app/src/main/res/drawable/ic_arrow.xml" value="0.25416666666666665" />
@@ -40,6 +41,7 @@
         <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/app/src/main/res/layout/screen_seet.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/app/src/main/res/layout/screen_show_trip.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/app/src/main/res/layout/screen_trip_detalis.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/app/src/main/res/layout/screen_trip_info.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/app/src/main/res/layout/screen_verify.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/app/src/main/res/layout/search_page.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/app/src/main/res/layout/search_page_item.xml" value="0.2" />
