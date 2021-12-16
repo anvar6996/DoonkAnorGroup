@@ -42,6 +42,7 @@
             android:id="@+id/action_verifyScreen_to_mainScreen"
             app:destination="@id/mainScreen" />
     </fragment>
+
     <fragment
         android:id="@+id/showTripScreen"
         android:name="uz.anorgroup.doonkanorgroup.presenter.screens.ShowTripScreen"

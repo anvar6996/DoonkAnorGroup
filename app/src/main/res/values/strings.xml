@@ -80,5 +80,11 @@
     <string name="fura">МAN 40/ft Long</string>
     <string name="addCar">+ Добавить автомобиль</string>
 
+    <!--Add Car Dialog-->
+    <string name="type_Car">Тип автомобилья</string>
+    <string name="easy_car">Легкий автомобиль</string>
+    <string name="microBus">Автобус/Микроавтобус</string>
+    <string name="fura_add">Фура</string>
+
 
 </resources>
