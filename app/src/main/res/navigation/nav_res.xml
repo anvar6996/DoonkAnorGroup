@@ -71,5 +71,35 @@
         android:name="uz.anorgroup.doonkanorgroup.presenter.screens.pages.VehicleTypeScreen"
         android:label="VehicleTypeScreen"
         tools:layout="@layout/screen_vehicle_type" />
+    <fragment
+        android:id="@+id/tripPage"
+        android:name="uz.anorgroup.doonkanorgroup.presenter.screens.pages.TripPage"
+        android:label="TripPage"
+        tools:layout="@layout/page_trip" />
+    <fragment
+        android:id="@+id/createTripPage"
+        android:name="uz.anorgroup.doonkanorgroup.presenter.screens.pages.CreateTripPage"
+        android:label="CreateTripPage"
+        tools:layout="@layout/page_post" />
+    <fragment
+        android:id="@+id/chatPage"
+        android:name="uz.anorgroup.doonkanorgroup.presenter.screens.pages.ChatPage"
+        android:label="ChatPage"
+        tools:layout="@layout/page_chat" />
+    <fragment
+        android:id="@+id/profilePage"
+        android:name="uz.anorgroup.doonkanorgroup.presenter.screens.pages.ProfilePage"
+        android:label="ProfilePage"
+        tools:layout="@layout/page_profile" />
+    <fragment
+        android:id="@+id/searchPage"
+        android:name="uz.anorgroup.doonkanorgroup.presenter.screens.pages.SearchPage"
+        android:label="SearchPage"
+        tools:layout="@layout/page_search" />
+    <fragment
+        android:id="@+id/truckAddScreen"
+        tools:layout="@layout/screen_truck_add"
+        android:name="uz.anorgroup.doonkanorgroup.presenter.screens.TruckAddScreen"
+        android:label="TruckAddScreen" />
 
 </navigation>

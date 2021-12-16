@@ -17,12 +17,16 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
-
+        buildConfigField('String', 'BASE_URL', '"http://d82c-213-230-74-178.ngrok.io"')
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
+        debug {
+            buildConfigField('Boolean', 'LOGGING', 'true')
+        }
         release {
+            buildConfigField('Boolean', 'LOGGING', 'false')
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
