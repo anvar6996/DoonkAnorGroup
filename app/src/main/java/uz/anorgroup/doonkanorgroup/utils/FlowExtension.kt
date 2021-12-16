@@ -1,4 +1,4 @@
-package uz.gita.bank2.utils
+package uz.anorgroup.doonkanorgroup.utils
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.channels.BufferOverflow

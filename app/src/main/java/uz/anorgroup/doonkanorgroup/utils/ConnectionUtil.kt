@@ -1,10 +1,10 @@
-package uz.gita.bank2.utils
+package uz.anorgroup.doonkanorgroup.utils
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
-import uz.gita.bank2.app.App
+import uz.anorgroup.doonkanorgroup.app.App
 
 fun isConnected(): Boolean = App.instance.isAvailableNetwork()
 

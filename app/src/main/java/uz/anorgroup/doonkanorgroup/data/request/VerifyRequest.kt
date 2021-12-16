@@ -4,9 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class VerifyRequest(
 
-	@field:SerializedName("code")
-	val code: String? = null,
+	val code: String,
 
-	@field:SerializedName("phone")
-	val phone: String? = null
+	val phone: String
 )
