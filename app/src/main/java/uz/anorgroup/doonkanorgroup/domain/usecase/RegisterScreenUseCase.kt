@@ -8,5 +8,6 @@ import uz.anorgroup.doonkanorgroup.data.responce.RegisterResponse
 
 interface RegisterScreenUseCase {
     fun continueSingUp(request: ContinueSignUpRequest): Flow<Result<ContinueResponse>>
+    fun register(request: RegisterRequest): Flow<Result<RegisterResponse>>
 
 }
