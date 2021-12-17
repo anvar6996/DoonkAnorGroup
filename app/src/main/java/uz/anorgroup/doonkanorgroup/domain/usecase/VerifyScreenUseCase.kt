@@ -8,7 +8,9 @@ import uz.anorgroup.doonkanorgroup.data.responce.VerifyResponse
 
 
 interface VerifyScreenUseCase {
-    fun sendSmsVerify(request: VerifyRequest): Flow<Result<VerifyResponse>>
+
     fun resgiter(request: RegisterRequest): Flow<Result<RegisterResponse>>
+
     fun sendSmsVeryfy(request: VerifyRequest): Flow<Result<VerifyResponse>>
+
 }

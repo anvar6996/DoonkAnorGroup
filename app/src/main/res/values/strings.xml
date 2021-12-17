@@ -86,7 +86,40 @@
     <string name="microBus">Автобус/Микроавтобус</string>
     <string name="fura_add">Фура</string>
     <!--Intermediate -->
+
     <string name="intermediate">Промежуточное</string>
     <string name="add_intermediate">Добавить промежутоные пункты?</string>
 
+    <!--Screen add car-->
+    <string name="create_car">Создание автомобиля</string>
+    <string name="download_photo">Загрузить фото</string>
+    <string name="truck">Грузовик</string>
+    <string name="choose_type">Выберите тип загрузки</string>
+    <string name="cargo_capacity">Грузодьемность</string>
+
+    <!--New Order Screen -->
+
+    <string name="new_order">Новый заказ</string>
+    <string name="sender">Отправитель</string>
+    <string name="phone">Телефон</string>
+    <string name="nameLastname">ФИО</string>
+    <string name="recipient">Получатель</string>
+    <string name="adressRecipient">Адрес получателья</string>
+    <string name="secondary">Следущий</string>
+
+    <!--Screen about reference -->
+    <string name="about_package">Информация о посылке</string>
+    <string name="type_package">Тип посылки</string>
+    <string name="document">Документ</string>
+    <string name="parametrs_package">Размеры посылки</string>
+    <string name="length">Длина, см</string>
+    <string name="with">Шрина, см</string>
+    <string name="height">Высота, см</string>
+    <string name="cost_package">Стоимость посылки</string>
+    <string name="additionally_package">Дополнительные</string>
+    <string name="fragile">Хрупкий</string>
+    <string name="belay">Страховка</string>
+    <string name="comments">Коммент</string>
+    <string name="cost_belay">Цена страхование</string>
+    <string name="over_cost">Сумма:</string>
 </resources>

@@ -65,7 +65,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/download_photo"
+        android:text="Загрузить фото"
         android:textAllCaps="true"
         android:textColor="#27AE61"
         android:textSize="11sp"
@@ -90,7 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
-        android:text="@string/truck"
+        android:text="Грузовик"
         app:layout_constraintBottom_toBottomOf="@id/tip_transporta_line"
         app:layout_constraintLeft_toLeftOf="@id/tip_transporta_line"
         app:layout_constraintTop_toTopOf="@id/tip_transporta_line" />
@@ -120,7 +120,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
-        android:text="@string/choose_type"
+        android:text="Выберите тип загрузки"
         app:layout_constraintBottom_toBottomOf="@id/tip_kuzova_line"
         app:layout_constraintLeft_toLeftOf="@id/tip_kuzova_line"
         app:layout_constraintTop_toTopOf="@id/tip_kuzova_line" />
@@ -363,4 +363,5 @@
         app:layout_constraintLeft_toLeftOf="@id/saveBtn"
         app:layout_constraintRight_toRightOf="@id/saveBtn"
         app:layout_constraintTop_toTopOf="@id/saveBtn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

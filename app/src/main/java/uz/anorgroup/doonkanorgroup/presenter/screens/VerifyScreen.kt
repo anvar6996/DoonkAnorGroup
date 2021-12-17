@@ -8,6 +8,7 @@ import uz.anorgroup.doonkanorgroup.R
 
 @AndroidEntryPoint
 class VerifyScreen : Fragment(R.layout.screen_verify) {
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 
