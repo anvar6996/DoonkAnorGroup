@@ -51,11 +51,14 @@ class AuthRepositoryImpl @Inject constructor(private val api: AuthApi, private v
     }
 
     override fun register(request: RegisterRequest): Flow<Result<RegisterResponse>> = flow {
-        val responce = api.register(request)
-        if (responce.isSuccessful) {
-            emit(Result.success<RegisterResponse>(responce.body()!!))
+        val recponce = api.register(request)
+        if (recponce.isSuccessful) {
+            recponce.body()?.data?.let {
+                pref.accessToken = it.token
+            }
+            emit(Result.success<RegisterResponse>(recponce.body()!!))
         } else {
-            emit(Result.failure(Throwable(responce.errorBody().toString())))
+            emit(Result.failure(Throwable(recponce.errorBody().toString())))
         }
     }.catch {
         val errorMessage = Throwable("Sever bilan muammo bo'ldi")
