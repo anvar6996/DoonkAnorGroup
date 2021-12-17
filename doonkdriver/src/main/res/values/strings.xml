@@ -123,6 +123,7 @@
     <string name="secondary">Следущий</string>
 
     <!--Screen about reference -->
+
     <string name="about_package">Информация о посылке</string>
     <string name="type_package">Тип посылки</string>
     <string name="document">Документ</string>
@@ -137,5 +138,6 @@
     <string name="comments">Коммент</string>
     <string name="cost_belay">Цена страхование</string>
     <string name="over_cost">Сумма:</string>
+    <string name="skip">Пропустить:</string>
 
 </resources>
