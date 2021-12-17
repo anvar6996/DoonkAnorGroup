@@ -89,11 +89,6 @@
         android:label="VehicleTypeScreen"
         tools:layout="@layout/screen_vehicle_type" />
     <fragment
-        android:id="@+id/tripPage"
-        android:name="uz.anorgroup.doonkanorgroup.presenter.screens.pages.TripPage"
-        android:label="TripPage"
-        tools:layout="@layout/page_trip" />
-    <fragment
         android:id="@+id/createTripPage"
         android:name="uz.anorgroup.doonkanorgroup.presenter.screens.pages.CreateTripPage"
         android:label="CreateTripPage"
