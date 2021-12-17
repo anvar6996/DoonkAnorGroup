@@ -46,7 +46,9 @@
         tools:layout="@layout/screen_verify">
         <action
             android:id="@+id/action_verifyScreen_to_mainScreen"
-            app:destination="@id/mainScreen" />
+            app:destination="@id/mainScreen"
+            app:popUpTo="@id/nav_res"
+            app:popUpToInclusive="true" />
         <argument
             android:name="name"
             app:argType="string" />

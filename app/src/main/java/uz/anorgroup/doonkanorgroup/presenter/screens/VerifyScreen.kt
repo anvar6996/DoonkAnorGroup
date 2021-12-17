@@ -6,13 +6,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.fraggjkee.smsconfirmationview.SmsConfirmationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import uz.anorgroup.doonkanorgroup.R
+import uz.anorgroup.doonkanorgroup.data.request.RegisterRequest
 import uz.anorgroup.doonkanorgroup.data.request.VerifyRequest
 import uz.anorgroup.doonkanorgroup.databinding.ScreenVerifyBinding
 import uz.anorgroup.doonkanorgroup.presenter.viewmodel.VerifyViewModel
@@ -25,13 +25,16 @@ class VerifyScreen : Fragment(R.layout.screen_verify) {
     private val binding by viewBinding(ScreenVerifyBinding::bind)
     private val viewModel: VerifyViewModel by viewModels<VerifyViewModelImpl>()
     private var s: String? = null
-    private val args: VerifyScreenArgs by navArgs()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) = binding.scope {
-        loginBtn.isEnabled=false
-        val bundle=requireArguments()
-        val phone=bundle.getString("phone") as String
+        loginBtn.isEnabled = false
+        val bundle = requireArguments()
+        val phone = bundle.getString("phone") as String
+        val pos = bundle.getBoolean("pos")
+        val name = bundle.getString("name") as String
+        val surname = bundle.getString("surname") as String
+
         smsVerifyCode.onChangeListener = SmsConfirmationView.OnChangeListener { code, isComplete ->
-            loginBtn.isEnabled=isComplete
+            loginBtn.isEnabled = isComplete
             if (isComplete) {
                 s = code
             }
@@ -41,11 +44,17 @@ class VerifyScreen : Fragment(R.layout.screen_verify) {
             s?.let {
                 code = it
             }
-            viewModel.verify(
-                VerifyRequest(
-                    code, phone
+            if (pos) {
+                viewModel.verify(
+                    VerifyRequest(
+                        code, phone
+                    )
                 )
-            )
+            } else {
+                viewModel.register(
+                    RegisterRequest(code, phone, surname, name)
+                )
+            }
         }
 
         viewModel.errorFlow.onEach {
@@ -58,7 +67,7 @@ class VerifyScreen : Fragment(R.layout.screen_verify) {
         }.launchIn(lifecycleScope)
 
         viewModel.successFlow.onEach {
-            showToast("Success")
+            findNavController().navigate(R.id.mainScreen)
         }.launchIn(lifecycleScope)
 
         viewModel.openMainFlow.onEach {

@@ -12,4 +12,5 @@ interface VerifyViewModel {
     val successFlow: Flow<Unit>
     val openMainFlow:Flow<Unit>
     fun verify(request: VerifyRequest)
+    fun register(request: RegisterRequest)
 }
