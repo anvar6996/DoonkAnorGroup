@@ -9,3 +9,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "DoonkAnorGroup"
 include ':app'
+include ':doonkdriver'

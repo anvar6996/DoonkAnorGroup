@@ -10,6 +10,7 @@
         android:id="@+id/search"
         android:icon="@drawable/ic_search_svgrepo_com"
         android:title="@string/search" />
+
     <item
         android:id="@+id/create"
         android:icon="@drawable/ic_add_svgrepo_com"
