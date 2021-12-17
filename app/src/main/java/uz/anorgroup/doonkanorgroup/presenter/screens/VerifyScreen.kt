@@ -25,14 +25,29 @@ class VerifyScreen : Fragment(R.layout.screen_verify) {
     private val binding by viewBinding(ScreenVerifyBinding::bind)
     private val viewModel: VerifyViewModel by viewModels<VerifyViewModelImpl>()
     private var s: String? = null
+    private var phone: String? = null
+    private var name: String? = null
+    private var surname: String? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        viewModel.successFlow.onEach {
+            findNavController().navigate(R.id.action_verifyScreen_to_mainScreen)
+        }.launchIn(lifecycleScope)
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) = binding.scope {
         loginBtn.isEnabled = false
         val bundle = requireArguments()
-        val phone = bundle.getString("phone") as String
         val pos = bundle.getBoolean("pos")
-        val name = bundle.getString("name") as String
-        val surname = bundle.getString("surname") as String
-
+        if (pos) {
+            phone = bundle.getString("phone") as String
+        } else {
+            phone = bundle.getString("phone") as String
+            name = bundle.getString("name") as String
+            surname = bundle.getString("surname") as String
+        }
         smsVerifyCode.onChangeListener = SmsConfirmationView.OnChangeListener { code, isComplete ->
             loginBtn.isEnabled = isComplete
             if (isComplete) {
@@ -46,13 +61,11 @@ class VerifyScreen : Fragment(R.layout.screen_verify) {
             }
             if (pos) {
                 viewModel.verify(
-                    VerifyRequest(
-                        code, phone
-                    )
+                    VerifyRequest(code, phone!!)
                 )
             } else {
                 viewModel.register(
-                    RegisterRequest(code, phone, surname, name)
+                    RegisterRequest(code, phone!!, surname!!, name!!)
                 )
             }
         }
@@ -66,13 +79,17 @@ class VerifyScreen : Fragment(R.layout.screen_verify) {
             else progress.hide()
         }.launchIn(lifecycleScope)
 
-        viewModel.successFlow.onEach {
-            findNavController().navigate(R.id.mainScreen)
-        }.launchIn(lifecycleScope)
-
         viewModel.openMainFlow.onEach {
             findNavController().navigate(R.id.mainScreen)
         }.launchIn(lifecycleScope)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        s=null
+        phone=null
+        name=null
+        surname=null
     }
 
 }

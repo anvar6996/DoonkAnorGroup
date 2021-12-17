@@ -28,14 +28,16 @@ class LoginScreen : Fragment(R.layout.screen_login) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         viewModel.openRegisterFlow.onEach {
             findNavController().navigate(LoginScreenDirections.actionLoginScreenToRegisterScreen(binding.editText.rawText))
         }.launchIn(lifecycleScope)
+
         viewModel.openVerifyFlow.onEach {
             val bundle=Bundle()
             bundle.putString("phone",binding.editText.rawText)
             bundle.putBoolean("pos",true)
-            findNavController().navigate(R.id.verifyScreen,bundle)
+            findNavController().navigate(R.id.action_loginScreen_to_verifyScreen,bundle)
         }.launchIn(lifecycleScope)
 
     }
@@ -52,18 +54,15 @@ class LoginScreen : Fragment(R.layout.screen_login) {
         }.launchIn(lifecycleScope)
 
         loginBtn.setOnClickListener {
-            viewModel.login(
-                LoginRequest(
-                    editText.rawText
-                )
-            )
+            viewModel.login(LoginRequest(editText.rawText))
         }
+
         viewModel.errorFlow.onEach {
+            showToast("Error")
         }.launchIn(lifecycleScope)
 
         viewModel.successFlow.onEach {
             showToast("Success")
-
         }.launchIn(lifecycleScope)
 
         viewModel.progressFlow.onEach {
