@@ -32,7 +32,6 @@ class MainScreen : Fragment(R.layout.screen_main) {
                 }
                 R.id.chat -> {
                     bind.pager.setCurrentItem(3, true)
-
                 }
                 R.id.profile -> {
                     bind.pager.setCurrentItem(4, true)

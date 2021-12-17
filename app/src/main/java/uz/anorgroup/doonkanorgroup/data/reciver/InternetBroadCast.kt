@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
 
-class IternetBroadCast : BroadcastReceiver() {
+class InternetBroadCast : BroadcastReceiver() {
     private var listener: ((Boolean) -> Unit)? = null
     override fun onReceive(context: Context?, intent: Intent?) {
         listener?.invoke(isConnectedOrConnecting(context!!))
