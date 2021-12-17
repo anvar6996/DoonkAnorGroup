@@ -37,7 +37,7 @@
         android:id="@+id/type_package"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:text="@string/type_package"
         android:textColor="@color/realBlack"
         android:textSize="14sp"
@@ -59,7 +59,7 @@
         android:id="@+id/ducument"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:hint="@string/document"
         android:maxLines="1"
         android:minLines="1"
@@ -72,7 +72,7 @@
         android:id="@+id/parametrs_package"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:text="@string/parametrs_package"
         android:textColor="@color/realBlack"
         android:textSize="14sp"
@@ -84,7 +84,7 @@
         android:id="@+id/length_bg"
         android:layout_width="0dp"
         android:layout_height="?android:actionBarSize"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:src="@drawable/ic_dlina_line"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/with_bg"
@@ -94,7 +94,7 @@
         android:id="@+id/with_bg"
         android:layout_width="0dp"
         android:layout_height="?android:actionBarSize"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:src="@drawable/ic_dlina_line"
         app:layout_constraintLeft_toRightOf="@id/length_bg"
         app:layout_constraintRight_toLeftOf="@id/height_bg"
@@ -104,22 +104,12 @@
         android:id="@+id/height_bg"
         android:layout_width="0dp"
         android:layout_height="?android:actionBarSize"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:src="@drawable/ic_dlina_line"
         app:layout_constraintLeft_toRightOf="@id/with_bg"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/parametrs_package" />
 
-
-    <ImageView
-        android:id="@+id/indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="9dp"
-        android:src="@drawable/ic_bottom_indicator"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
 
     <ImageView
         android:id="@+id/saveBtn"
@@ -134,6 +124,7 @@
         android:id="@+id/withText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:hint="@string/with_in_metr"
         android:maxLines="1"
         android:minLines="1"
         app:layout_constraintBottom_toBottomOf="@id/with_bg"
@@ -145,6 +136,7 @@
         android:id="@+id/heightText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:hint="@string/height_in_metr"
         android:maxLines="1"
         android:minLines="1"
         app:layout_constraintBottom_toBottomOf="@id/height_bg"
@@ -156,6 +148,7 @@
         android:id="@+id/lengthText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:hint="@string/length"
         android:maxLines="1"
         android:minLines="1"
         app:layout_constraintBottom_toBottomOf="@id/length_bg"
@@ -174,4 +167,148 @@
         app:layout_constraintLeft_toLeftOf="@id/saveBtn"
         app:layout_constraintRight_toRightOf="@id/saveBtn"
         app:layout_constraintTop_toTopOf="@id/saveBtn" />
+
+    <ImageView
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:src="@drawable/ic_bottom_indicator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/cost_package_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@string/parametrs_package"
+        android:textColor="@color/realBlack"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/with_bg" />
+
+    <ImageView
+        android:id="@+id/cost_bg"
+        android:layout_width="0dp"
+        android:layout_height="?android:actionBarSize"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_dlina_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cost_package_text" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/costText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:hint="1,600,000 UZS"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@id/cost_bg"
+        app:layout_constraintLeft_toLeftOf="@id/cost_bg"
+        app:layout_constraintRight_toRightOf="@id/cost_bg"
+        app:layout_constraintTop_toTopOf="@id/cost_bg" />
+
+    <TextView
+        android:id="@+id/additionally_package_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@string/additionally_package"
+        android:textColor="@color/realBlack"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cost_bg" />
+
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/fragileChekBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textColor="@color/nextBt"
+        android:textColorLink="@color/nextBt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/additionally_package_text" />
+
+    <TextView
+        android:id="@+id/fragile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragile"
+        android:textColor="@color/realBlack"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/fragileChekBox"
+        app:layout_constraintLeft_toRightOf="@id/fragileChekBox"
+        app:layout_constraintTop_toTopOf="@id/fragileChekBox" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/belayChekBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textColor="@color/nextBt"
+        android:textColorLink="@color/nextBt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragileChekBox" />
+
+    <TextView
+        android:id="@+id/belay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/belay"
+        android:textColor="@color/realBlack"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/belayChekBox"
+        app:layout_constraintLeft_toRightOf="@id/belayChekBox"
+        app:layout_constraintTop_toTopOf="@id/belayChekBox" />
+
+    <TextView
+        android:id="@+id/saveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:text="@string/over_cost"
+        android:textColor="@color/realBlack"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/saveBtn"
+        app:layout_constraintLeft_toLeftOf="@id/saveBtn" />
+
+    <TextView
+        android:id="@+id/costBelayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:text="@string/cost_belay"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/saveText"
+        app:layout_constraintLeft_toLeftOf="@id/saveBtn" />
+
+    <TextView
+        android:id="@+id/overCostText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minLines="1"
+        android:maxLines="1"
+        android:text="1799 руб"
+        android:textColor="@color/realBlack"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/saveBtn"
+        app:layout_constraintRight_toRightOf="@id/saveBtn"
+        app:layout_constraintTop_toTopOf="@id/saveText" />
+
+    <TextView
+        android:id="@+id/belayCostText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="400 руб"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/belayCostText"
+        app:layout_constraintRight_toRightOf="@id/saveBtn"
+        app:layout_constraintTop_toTopOf="@id/costBelayText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
