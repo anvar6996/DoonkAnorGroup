@@ -9,5 +9,6 @@ interface LoginViewModel {
     val progressFlow: Flow<Boolean>
     val successFlow: Flow<Unit>
     val openRegisterFlow: Flow<Unit>
+    val openVerifyFlow:Flow<Unit>
     fun login(request: LoginRequest)
 }

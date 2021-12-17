@@ -6,6 +6,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
+import uz.anorgroup.doonkanorgroup.data.request.ContinueSignUpRequest
 import uz.anorgroup.doonkanorgroup.data.request.RegisterRequest
 import uz.anorgroup.doonkanorgroup.domain.usecase.RegisterScreenUseCase
 import uz.anorgroup.doonkanorgroup.presenter.viewmodel.RegisterViewModel
@@ -20,7 +21,7 @@ class RegisterViewModelImpl @Inject constructor(private val useCase: RegisterScr
     override val successFlow = eventValueFlow<Unit>()
     override val openVerifyFlow = eventValueFlow<Unit>()
 
-    override fun register(request: RegisterRequest) {
+    override fun continueSignUpRequest(request: ContinueSignUpRequest) {
         if (!isConnected()) {
             viewModelScope.launch {
                 errorFlow.emit("Internet bilan muammo bo'ldi")
@@ -30,7 +31,7 @@ class RegisterViewModelImpl @Inject constructor(private val useCase: RegisterScr
         viewModelScope.launch {
             progressFlow.emit(true)
         }
-        useCase.register(request).onEach {
+        useCase.continueSingUp(request).onEach {
             it.onSuccess {
                 progressFlow.emit(false)
                 successFlow.emit(Unit)

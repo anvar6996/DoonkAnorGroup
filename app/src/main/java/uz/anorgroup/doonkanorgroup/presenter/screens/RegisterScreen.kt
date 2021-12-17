@@ -5,6 +5,8 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import by.kirich1409.viewbindingdelegate.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.combine
@@ -13,8 +15,7 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
 import ru.ldralighieri.corbind.widget.textChanges
 import uz.anorgroup.doonkanorgroup.R
-import uz.anorgroup.doonkanorgroup.data.request.LoginRequest
-import uz.anorgroup.doonkanorgroup.data.request.RegisterRequest
+import uz.anorgroup.doonkanorgroup.data.request.ContinueSignUpRequest
 import uz.anorgroup.doonkanorgroup.databinding.ScreenRegisterBinding
 import uz.anorgroup.doonkanorgroup.presenter.viewmodel.RegisterViewModel
 import uz.anorgroup.doonkanorgroup.presenter.viewmodel.impl.RegisterViewModelImpl
@@ -25,6 +26,23 @@ import uz.anorgroup.doonkanorgroup.utils.showToast
 class RegisterScreen : Fragment(R.layout.screen_register) {
     private val binding by viewBinding(ScreenRegisterBinding::bind)
     private val viewModel: RegisterViewModel by viewModels<RegisterViewModelImpl>()
+    private val args: RegisterScreenArgs by navArgs()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        viewModel.successFlow.onEach {
+            showToast("Success")
+            findNavController().navigate(
+                RegisterScreenDirections.actionRegisterScreenToVerifyScreen(
+                    binding.nameEditText.text.toString(),
+                    binding.surnameEditText.text.toString(),
+                    args.phone
+                )
+            )
+        }.launchIn(lifecycleScope)
+
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) = binding.scope {
         combine(
@@ -39,25 +57,21 @@ class RegisterScreen : Fragment(R.layout.screen_register) {
             loginBtn.isEnabled = it
         }.launchIn(lifecycleScope)
 
-//        loginBtn.setOnClickListener {
-//            viewModel.register(
-//                (
-//                    "+998${editText.rawText}"
-//                )
-//            )
-//        }
+        loginBtn.setOnClickListener {
+            viewModel.continueSignUpRequest(
+                ContinueSignUpRequest(
+                    args.phone
+                )
+            )
+        }
         viewModel.errorFlow.onEach {
             showToast(it)
         }.launchIn(lifecycleScope)
 
-        viewModel.successFlow.onEach {
-            showToast("Success")
+        viewModel.progressFlow.onEach {
+            if (it) progress.show()
+            else progress.hide()
         }.launchIn(lifecycleScope)
-
-//        viewModel.progressFlow.onEach {
-//            if (it) progress.show()
-//            else progress.hide()
-//        }.launchIn(lifecycleScope)
     }
 
 }

@@ -29,10 +29,14 @@ class LoginScreen : Fragment(R.layout.screen_login) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel.openRegisterFlow.onEach {
-            findNavController().navigate(LoginScreenDirections.actionLoginScreenToRegisterScreen("+998${binding.editText.rawText}"))
+            findNavController().navigate(LoginScreenDirections.actionLoginScreenToRegisterScreen(binding.editText.rawText))
+        }.launchIn(lifecycleScope)
+        viewModel.openRegisterFlow.onEach {
+            findNavController().navigate(LoginScreenDirections.actionLoginScreenToRegisterScreen(binding.editText.rawText))
         }.launchIn(lifecycleScope)
 
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) = binding.scope {
 
         combine(
@@ -47,12 +51,11 @@ class LoginScreen : Fragment(R.layout.screen_login) {
         loginBtn.setOnClickListener {
             viewModel.login(
                 LoginRequest(
-                    "+998${editText.rawText}"
+                    editText.rawText
                 )
             )
         }
         viewModel.errorFlow.onEach {
-            showToast(it)
         }.launchIn(lifecycleScope)
 
         viewModel.successFlow.onEach {

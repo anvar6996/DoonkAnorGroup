@@ -11,5 +11,5 @@ interface RegisterViewModel {
     val progressFlow: Flow<Boolean>
     val successFlow: Flow<Unit>
     val openVerifyFlow:Flow<Unit>
-    fun register(request: ContinueSignUpRequest)
+    fun continueSignUpRequest(request: ContinueSignUpRequest)
 }

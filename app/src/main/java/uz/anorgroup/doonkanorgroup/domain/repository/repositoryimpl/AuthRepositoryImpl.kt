@@ -57,7 +57,7 @@ class AuthRepositoryImpl @Inject constructor(private val api: AuthApi, private v
     }.flowOn(Dispatchers.IO)
 
     override fun verify(request: VerifyRequest): Flow<Result<VerifyResponse>> = flow {
-        val responce = api.veryfyCode(request)
+        val responce = api.verifyCode(request)
         if (responce.isSuccessful) {
             responce.body()?.data.let {
                 if (it != null) {

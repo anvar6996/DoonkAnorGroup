@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_res"
-    app:startDestination="@id/mainScreen">
+    app:startDestination="@id/loginScreen">
 
 
     <fragment
@@ -35,6 +35,9 @@
         <action
             android:id="@+id/action_loginScreen_to_verifyScreen"
             app:destination="@id/verifyScreen" />
+        <action
+            android:id="@+id/action_loginScreen_to_verifyScreen2"
+            app:destination="@id/verifyScreen" />
     </fragment>
     <fragment
         android:id="@+id/verifyScreen"
@@ -44,6 +47,15 @@
         <action
             android:id="@+id/action_verifyScreen_to_mainScreen"
             app:destination="@id/mainScreen" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="surname"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
     </fragment>
 
     <fragment
