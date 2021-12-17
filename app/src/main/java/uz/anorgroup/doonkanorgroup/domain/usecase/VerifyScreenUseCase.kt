@@ -10,4 +10,5 @@ import uz.anorgroup.doonkanorgroup.data.responce.VerifyResponse
 interface VerifyScreenUseCase {
     fun sendSmsVerify(request: VerifyRequest): Flow<Result<VerifyResponse>>
     fun register(request: RegisterRequest): Flow<Result<RegisterResponse>>
+    fun saveData(phoneNumber: String, name: String, lastName: String)
 }
