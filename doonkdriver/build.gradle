@@ -12,13 +12,24 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "uz.anorgroup.doonkdriver"
+        applicationId "uz.anorgroup.doonkanorgroup"
         minSdk 21
         targetSdk 31
         versionCode 1
         versionName "1.0"
-
+        buildConfigField('String', 'BASE_URL', '"http://89.223.71.112:9496/"')
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField('Boolean', 'LOGGING', 'true')
+        }
+        release {
+            buildConfigField('Boolean', 'LOGGING', 'false')
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
     }
 
     buildTypes {
