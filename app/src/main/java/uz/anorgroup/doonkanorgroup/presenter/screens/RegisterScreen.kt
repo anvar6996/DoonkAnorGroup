@@ -33,12 +33,13 @@ class RegisterScreen : Fragment(R.layout.screen_register) {
 
         viewModel.successFlow.onEach {
             showToast("Success")
-            val bundle=Bundle()
-            bundle.putString("phone",args.phone)
-            bundle.putString("name",binding.nameEditText.text.toString())
-            bundle.putString("surname",binding.surnameEditText.text.toString())
+            val bundle = Bundle()
+            bundle.putString("phone", args.phone)
+            bundle.putString("name", binding.nameEditText.text.toString())
+            bundle.putString("surname", binding.surnameEditText.text.toString())
+            bundle.putBoolean("pos", false)
             findNavController().navigate(
-               R.id.action_registerScreen_to_verifyScreen,bundle
+                R.id.action_registerScreen_to_verifyScreen, bundle
             )
         }.launchIn(lifecycleScope)
 

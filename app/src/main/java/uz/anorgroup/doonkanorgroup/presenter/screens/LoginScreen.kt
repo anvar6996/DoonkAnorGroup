@@ -34,6 +34,7 @@ class LoginScreen : Fragment(R.layout.screen_login) {
         viewModel.openVerifyFlow.onEach {
             val bundle=Bundle()
             bundle.putString("phone",binding.editText.rawText)
+            bundle.putBoolean("pos",true)
             findNavController().navigate(R.id.verifyScreen,bundle)
         }.launchIn(lifecycleScope)
 
