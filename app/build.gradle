@@ -136,5 +136,14 @@ dependencies {
      PDFCreatorAndroid
      */
     implementation 'com.github.tejpratap46:PDFCreatorAndroid:3.0.2'
+    /**
+     Material
+     */
+    implementation 'com.google.android.material:material:1.4.0'
+
+    /**
+     CircleImageView
+     */
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 }

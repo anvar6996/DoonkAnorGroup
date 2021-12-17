@@ -137,4 +137,7 @@
     <string name="comments">Коммент</string>
     <string name="cost_belay">Цена страхование</string>
     <string name="over_cost">Сумма:</string>
+    <string name="svet">Цвет</string>
+    <string name="color_text">Черный</string>
+    <string name="text_gasnomer_bottom">На будет отображаться в поездке</string>
 </resources>

@@ -137,6 +137,7 @@
         app:layout_constraintBottom_toBottomOf="@id/tip_kuzova_line"
         app:layout_constraintRight_toRightOf="@id/tip_kuzova_line"
         app:layout_constraintTop_toTopOf="@id/tip_kuzova_line" />
+
     <ImageView
         android:id="@+id/god_vipuska"
         android:layout_width="0dp"
@@ -177,13 +178,13 @@
         android:src="@drawable/ic_tip_line"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tip_kuzova_line" />
+        app:layout_constraintTop_toBottomOf="@id/god_vipuska" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
-        android:text="@string/year_of_issue"
+        android:text="@string/svet"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/svet"
         app:layout_constraintLeft_toLeftOf="@id/svet"
@@ -192,13 +193,56 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="17.5dp"
-        android:text="@string/select_text"
+        android:layout_marginEnd="8dp"
+        android:text="@string/color_text"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/svet"
+        app:layout_constraintRight_toLeftOf="@id/circle_color"
+        app:layout_constraintTop_toTopOf="@id/svet" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_color"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="15dp"
+        android:padding="8dp"
+        android:src="@color/black"
         app:layout_constraintBottom_toBottomOf="@id/svet"
         app:layout_constraintRight_toRightOf="@id/svet"
         app:layout_constraintTop_toTopOf="@id/svet" />
 
+
+    <ImageView
+        android:id="@+id/gasnomer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_tip_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/svet" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:text="@string/year_of_issue"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/gasnomer"
+        app:layout_constraintLeft_toLeftOf="@id/gasnomer"
+        app:layout_constraintTop_toTopOf="@id/gasnomer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/text_gasnomer_bottom"
+        android:textSize="12sp"
+        android:layout_marginStart="16dp"
+        android:alpha=".6"
+        app:layout_constraintLeft_toLeftOf="@id/gasnomer"
+        app:layout_constraintTop_toBottomOf="@id/gasnomer" />
 
     <ImageView
         android:id="@+id/indicator"

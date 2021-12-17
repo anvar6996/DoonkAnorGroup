@@ -55,7 +55,8 @@
         <entry key="..\:/Users/fayzi/AndroidStudioProjects/DoonkAnorGroupNew/app/src/main/res/layout/page_chat.xml" value="0.16304347826086957" />
         <entry key="..\:/Users/fayzi/AndroidStudioProjects/DoonkAnorGroupNew/app/src/main/res/layout/page_post.xml" value="0.16304347826086957" />
         <entry key="..\:/Users/fayzi/AndroidStudioProjects/DoonkAnorGroupNew/app/src/main/res/layout/page_profile.xml" value="0.16304347826086957" />
-        <entry key="..\:/Users/fayzi/AndroidStudioProjects/DoonkAnorGroupNew/app/src/main/res/layout/screen_car_add.xml" value="0.25" />
+        <entry key="..\:/Users/fayzi/AndroidStudioProjects/DoonkAnorGroupNew/app/src/main/res/layout/page_trip.xml" value="0.17527173913043478" />
+        <entry key="..\:/Users/fayzi/AndroidStudioProjects/DoonkAnorGroupNew/app/src/main/res/layout/screen_car_add.xml" value="0.22" />
         <entry key="..\:/Users/fayzi/AndroidStudioProjects/DoonkAnorGroupNew/app/src/main/res/layout/screen_intermediate.xml" value="0.17527173913043478" />
         <entry key="..\:/Users/fayzi/AndroidStudioProjects/DoonkAnorGroupNew/app/src/main/res/layout/screen_login.xml" value="0.16304347826086957" />
         <entry key="..\:/Users/fayzi/AndroidStudioProjects/DoonkAnorGroupNew/app/src/main/res/layout/screen_main.xml" value="0.16304347826086957" />
@@ -65,12 +66,6 @@
         <entry key="..\:/Users/fayzi/AndroidStudioProjects/DoonkAnorGroupNew/app/src/main/res/layout/screen_trip_info.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/fayzi/AndroidStudioProjects/DoonkAnorGroupNew/app/src/main/res/layout/screen_verify.xml" value="0.25" />
         <entry key="..\:/Users/fayzi/AndroidStudioProjects/DoonkAnorGroupNew/app/src/main/res/layout/search_page_item.xml" value="0.33" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/app/src/main/res/menu/menu_main_screen.xml" value="0.176" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/doonkdriver/src/main/res/drawable/add_car_bt_bg.xml" value="0.21296296296296297" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/doonkdriver/src/main/res/drawable/ic_line.xml" value="0.21296296296296297" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/doonkdriver/src/main/res/layout/screen_login.xml" value="0.23802083333333332" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/doonkdriver/src/main/res/layout/screen_register.xml" value="0.23802083333333332" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/DoonkAnorGroup/doonkdriver/src/main/res/layout/screen_verify.xml" value="0.23802083333333332" />
       </map>
     </option>
   </component>
