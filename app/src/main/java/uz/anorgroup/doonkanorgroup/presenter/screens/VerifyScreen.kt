@@ -27,13 +27,15 @@ class VerifyScreen : Fragment(R.layout.screen_verify) {
     private var s: String? = null
     private val args: VerifyScreenArgs by navArgs()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) = binding.scope {
-
+        loginBtn.isEnabled=false
+        val bundle=requireArguments()
+        val phone=bundle.getString("phone") as String
         smsVerifyCode.onChangeListener = SmsConfirmationView.OnChangeListener { code, isComplete ->
+            loginBtn.isEnabled=isComplete
             if (isComplete) {
                 s = code
             }
         }
-
         loginBtn.setOnClickListener {
             var code = ""
             s?.let {
@@ -41,13 +43,13 @@ class VerifyScreen : Fragment(R.layout.screen_verify) {
             }
             viewModel.verify(
                 VerifyRequest(
-                    code, args.phone
+                    code, phone
                 )
             )
         }
 
         viewModel.errorFlow.onEach {
-            showToast(it)
+            showToast("Error code")
         }.launchIn(lifecycleScope)
 
         viewModel.progressFlow.onEach {
@@ -60,7 +62,7 @@ class VerifyScreen : Fragment(R.layout.screen_verify) {
         }.launchIn(lifecycleScope)
 
         viewModel.openMainFlow.onEach {
-            findNavController().navigate(VerifyScreenDirections.actionVerifyScreenToMainScreen())
+            findNavController().navigate(R.id.mainScreen)
         }.launchIn(lifecycleScope)
     }
 

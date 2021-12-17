@@ -52,6 +52,7 @@
         android:layout_marginHorizontal="36dp"
         android:backgroundTint="@android:color/transparent"
         android:maxLength="17"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="@id/editBack"
         app:layout_constraintLeft_toLeftOf="@id/editBack"
         app:layout_constraintRight_toRightOf="@id/editBack"

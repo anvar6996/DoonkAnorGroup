@@ -31,8 +31,10 @@ class LoginScreen : Fragment(R.layout.screen_login) {
         viewModel.openRegisterFlow.onEach {
             findNavController().navigate(LoginScreenDirections.actionLoginScreenToRegisterScreen(binding.editText.rawText))
         }.launchIn(lifecycleScope)
-        viewModel.openRegisterFlow.onEach {
-            findNavController().navigate(LoginScreenDirections.actionLoginScreenToRegisterScreen(binding.editText.rawText))
+        viewModel.openVerifyFlow.onEach {
+            val bundle=Bundle()
+            bundle.putString("phone",binding.editText.rawText)
+            findNavController().navigate(R.id.verifyScreen,bundle)
         }.launchIn(lifecycleScope)
 
     }
