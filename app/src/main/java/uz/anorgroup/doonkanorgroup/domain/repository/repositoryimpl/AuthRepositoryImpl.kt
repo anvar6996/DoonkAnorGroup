@@ -44,6 +44,12 @@ class AuthRepositoryImpl @Inject constructor(private val api: AuthApi, private v
         emit(Result.failure(errorMessage))
     }.flowOn(Dispatchers.IO)
 
+    override fun saveData(phoneNumber: String, name: String, lastName: String) {
+        pref.name = name
+        pref.phoneNumber = phoneNumber
+        pref.surname
+    }
+
     override fun register(request: RegisterRequest): Flow<Result<RegisterResponse>> = flow {
         val responce = api.register(request)
         if (responce.isSuccessful) {

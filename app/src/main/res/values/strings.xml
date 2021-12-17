@@ -96,6 +96,16 @@
     <string name="truck">Грузовик</string>
     <string name="choose_type">Выберите тип загрузки</string>
     <string name="cargo_capacity">Грузодьемность</string>
+    <string name="volume">Обьем, м3</string>
+    <string name="internal_body">Внутренние габариты кузова</string>
+    <string name="length_in_metr">Длина, м</string>
+    <string name="with_in_metr">Шрина, м</string>
+    <string name="height_in_metr">Высота, м</string>
+    <string name="permissions">Разрешения</string>
+    <string name="tir">TIR</string>
+    <string name="emkt">EKMT</string>
+    <string name="adr">ADR</string>
+    <string name="save">Сохранить</string>
 
     <!--New Order Screen -->
 
