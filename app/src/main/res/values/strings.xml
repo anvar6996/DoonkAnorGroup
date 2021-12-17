@@ -88,5 +88,11 @@
     <!--Intermediate -->
     <string name="intermediate">Промежуточное</string>
     <string name="add_intermediate">Добавить промежутоные пункты?</string>
+    <string name="select_text">Выбрать</string>
+    <string name="marka">Марка</string>
+    <string name="model">Модель</string>
+    <string name="create_car">Создание автомобиля</string>
+    <string name="upload_foto">Загрузить фото</string>
+    <string name="year_of_issue">Год выпуска</string>
 
 </resources>
