@@ -10,6 +10,7 @@ import uz.anorgroup.doonkanorgroup.domain.usecase.VerifyScreenUseCase
 import javax.inject.Inject
 
 class VerifyScreenUseCaseImpl @Inject constructor(private val repository: AuthRepository) : VerifyScreenUseCase {
-    override fun resgiter(request: RegisterRequest): Flow<Result<RegisterResponse>> = repository.register(request)
-    override fun sendSmsVeryfy(request: VerifyRequest): Flow<Result<VerifyResponse>> = repository.verify(request)
+
+    override fun register(request: RegisterRequest): Flow<Result<RegisterResponse>> = repository.register(request)
+    override fun sendSmsVerify(request: VerifyRequest): Flow<Result<VerifyResponse>> = repository.verify(request)
 }

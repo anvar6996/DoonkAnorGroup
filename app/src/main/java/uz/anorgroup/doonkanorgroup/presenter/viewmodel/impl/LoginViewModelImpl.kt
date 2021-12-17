@@ -19,6 +19,7 @@ class LoginViewModelImpl @Inject constructor(private val useCase: LoginScreenUse
     override val progressFlow = eventValueFlow<Boolean>()
     override val successFlow = eventValueFlow<Unit>()
     override val openRegisterFlow = eventValueFlow<Unit>()
+    override val openVerifyFlow = eventValueFlow<Unit>()
 
     override fun login(request: LoginRequest) {
         if (!isConnected()) {
@@ -34,11 +35,12 @@ class LoginViewModelImpl @Inject constructor(private val useCase: LoginScreenUse
             it.onSuccess {
                 progressFlow.emit(false)
                 successFlow.emit(Unit)
-                openRegisterFlow.emit(Unit)
+                openVerifyFlow.emit(Unit)
             }
             it.onFailure { throwable ->
                 progressFlow.emit(false)
                 errorFlow.emit(throwable.message.toString())
+                openRegisterFlow.emit(Unit)
             }
         }.launchIn(viewModelScope)
     }

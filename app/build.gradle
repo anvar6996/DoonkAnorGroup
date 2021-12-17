@@ -17,7 +17,7 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
-        buildConfigField('String', 'BASE_URL', '"http://d82c-213-230-74-178.ngrok.io"')
+        buildConfigField('String', 'BASE_URL', '"http://89.223.71.112:9496/"')
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -119,11 +119,18 @@ dependencies {
     /**
      MaskEditText
      */
+    implementation 'io.github.vicmikhailau:MaskedEditText:4.0.7'
     implementation 'ru.egslava:MaskedEditText:1.0.5'
 
     /**
      * Corbind
      */
     implementation 'ru.ldralighieri.corbind:corbind:1.5.2'
+
+    /**
+     SmsConfirmationView
+     */
+    implementation 'com.github.fraggjkee:sms-confirmation-view:1.5.0'
+
 
 }

@@ -10,5 +10,6 @@ interface VerifyViewModel {
     val errorFlow: Flow<String>
     val progressFlow: Flow<Boolean>
     val successFlow: Flow<Unit>
+    val openMainFlow:Flow<Unit>
     fun verify(request: VerifyRequest)
 }

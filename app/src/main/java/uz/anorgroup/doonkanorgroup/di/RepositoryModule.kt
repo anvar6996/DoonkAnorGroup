@@ -14,6 +14,6 @@ interface RepositoryModule {
 
     @Binds
     @Singleton
-    abstract fun getAppRepository(impl: AuthRepositoryImpl): AuthRepository
+    fun getAppRepository(impl: AuthRepositoryImpl): AuthRepository
 
 }

@@ -24,5 +24,5 @@ interface AuthApi {
     suspend fun continueSingUp(@Body data: ContinueSignUpRequest): Response<ContinueResponse>
 
     @POST("verify")
-    suspend fun veryfyCode(@Body data: VerifyRequest): Response<VerifyResponse>
+    suspend fun verifyCode(@Body data: VerifyRequest): Response<VerifyResponse>
 }
