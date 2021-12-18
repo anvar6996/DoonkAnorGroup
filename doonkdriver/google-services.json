@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "364444094031",
+    "project_id": "doonkdriver-df40a",
+    "storage_bucket": "doonkdriver-df40a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364444094031:android:0f2844a0da8009fc80e43a",
+        "android_client_info": {
+          "package_name": "uz.anorgroup.doonkdriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364444094031-uacpd1j9f3fduse02jc1t31oh339i8fh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFgQSMnj_3bl446MHBPCOHbuW4ylQygLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364444094031-uacpd1j9f3fduse02jc1t31oh339i8fh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
