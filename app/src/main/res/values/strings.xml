@@ -140,4 +140,5 @@
     <string name="svet">Цвет</string>
     <string name="color_text">Черный</string>
     <string name="text_gasnomer_bottom">На будет отображаться в поездке</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
